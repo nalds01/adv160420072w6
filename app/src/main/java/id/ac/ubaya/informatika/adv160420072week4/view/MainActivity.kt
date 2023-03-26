@@ -1,7 +1,8 @@
-package id.ac.ubaya.informatika.adv160420072week4
+package id.ac.ubaya.informatika.adv160420072week4.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import id.ac.ubaya.informatika.adv160420072week4.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
