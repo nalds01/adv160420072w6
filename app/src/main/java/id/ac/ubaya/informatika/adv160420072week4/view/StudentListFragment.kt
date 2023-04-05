@@ -35,7 +35,7 @@ class StudentListFragment : Fragment() {
         val recView = view.findViewById<RecyclerView>(R.id.recView)
         recView?.layoutManager = LinearLayoutManager(context)
         recView?.adapter = studentListAdapter
-        observeViewModel()
+
         val refreshLayout = view.findViewById<SwipeRefreshLayout>(R.id.refreshLayout)
         val txtError = view.findViewById<TextView>(R.id.txtError)
         val progressLoad = view.findViewById<ProgressBar>(R.id.progressLoad)
@@ -46,7 +46,7 @@ class StudentListFragment : Fragment() {
             viewModel.refresh()
             refreshLayout.isRefreshing = false
         }
-
+        observeViewModel()
     }
     fun observeViewModel() {
         viewModel.studentsLD.observe(viewLifecycleOwner, Observer {
